@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Week 2026 · Heroturfs</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0b0c0e; --card:#15171a; --line:#2a2d31; --ink:#fff; --muted:#9aa3ab; --red:#e3332b; --ok:#43a35a; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: "Barlow", Arial, sans-serif; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 40px 24px 64px; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .eyebrow::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--red); margin-right: 10px; }
+  h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 64px; line-height: .95; margin: 14px 0 10px; }
+  h1 em { font-style: normal; color: var(--red); }
+  .lead { color: #c9ced3; font-size: 17px; max-width: 760px; line-height: 1.5; }
+  h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 30px; margin: 48px 0 16px; }
+  .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .step b { display: block; font-family: "Barlow Condensed", sans-serif; font-size: 26px; font-weight: 900; }
+  .step span { color: var(--muted); font-size: 14px; line-height: 1.45; display: block; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .piece { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+  .piece header { padding: 18px 20px 14px; display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+  .piece h3 { font-family: "Barlow Condensed", sans-serif; font-size: 26px; font-weight: 900; }
+  .piece p { color: var(--muted); font-size: 14px; line-height: 1.45; margin-top: 4px; }
+  .tag { white-space: nowrap; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 6px 10px; border-radius: 8px; }
+  .tag.ok { background: rgba(67,163,90,.16); color: #7fd394; }
+  .tag.wait { background: rgba(227,51,43,.16); color: #ff8a84; }
+  .frame { position: relative; height: 420px; background: #000; border-top: 1px solid var(--line); overflow: hidden; }
+  .frame iframe { position: absolute; top: 0; left: 0; width: 1440px; height: 900px; border: 0; transform: scale(.43); transform-origin: 0 0; }
+  .frame.mail iframe { width: 640px; height: 980px; transform: scale(.43); left: 50%; margin-left: -138px; }
+  .open { display: block; padding: 14px 20px; font-weight: 700; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: #fff; text-decoration: none; border-top: 1px solid var(--line); }
+  .open::after { content: "  →"; color: var(--red); }
+  .open:hover { background: #1c1f23; }
+  .list { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 6px 22px; }
+  .row { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: flex-start; }
+  .row:last-child { border-bottom: 0; }
+  .dot { flex: none; width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--muted); margin-top: 2px; }
+  .row.done .dot { border-color: var(--ok); background: var(--ok); }
+  .row b { display: block; font-size: 16px; }
+  .row span { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 3px; }
+  .row a { color: #fff; }
+  code { background: #23262a; padding: 1px 6px; border-radius: 5px; font-size: 13px; }
+  @media (max-width: 860px) {
+    h1 { font-size: 44px; }
+    .grid, .timeline { grid-template-columns: 1fr; }
+    .frame { height: 320px; }
+    .frame iframe { transform: scale(.33); }
+    .frame.mail iframe { transform: scale(.33); margin-left: -106px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Black Week · Heroturfs</p>
+  <h1>Black Week 2026. <em>Lo que queda listo.</em></h1>
+  <p class="lead">-20 % en pistas exclusivas, del 23 al 29 de noviembre o hasta agotar stock. En heroturfs.es, .eu, .fr, .it, .de, .nl y .pt (sin .com ni .co.uk).</p>
+
+  <div class="timeline">
+    <div class="step"><b>Sáb 21 · 00:00</b><span>Early access: pop-up con cuenta atrás, landing abierta y -20 % activo en Shopify. Quien se suscribe recibe el correo con el acceso.</span></div>
+    <div class="step"><b>Lun 23 · 00:00</b><span>Empieza la Black Week para todos: pop-up de oferta → landing, y las pistas entran en las colecciones.</span></div>
+    <div class="step"><b>Dom 29 · 23:59</b><span>Termina (o antes, si se agotan: el pop-up desaparece solo). Vuelve el pop-up de newsletter.</span></div>
+  </div>
+
+  <h2>Las piezas</h2>
+  <div class="grid">
+    <article class="piece">
+      <header><div><h3>Pop-up</h3><p>Early access con cuenta atrás, «tras suscribirse» y oferta (botones abajo dentro de la maqueta).</p></div><span class="tag wait">Falta fusionar #34</span></header>
+      <div class="frame"><iframe src="https://anarols.github.io/heroturfs-black-friday-2026/popup.html" loading="lazy" title="Pop-up"></iframe></div>
+      <a class="open" href="https://anarols.github.io/heroturfs-black-friday-2026/popup.html" target="_blank">Abrir el pop-up</a>
+    </article>
+    <article class="piece">
+      <header><div><h3>Landing /black-friday</h3><p>Las 3 pistas de Shopify con -20 %, fechas y unidades.</p></div><span class="tag wait">Falta fusionar #36</span></header>
+      <div class="frame"><iframe src="https://anarols.github.io/heroturfs-black-friday-2026/web.html" loading="lazy" title="Landing"></iframe></div>
+      <a class="open" href="https://anarols.github.io/heroturfs-black-friday-2026/web.html" target="_blank">Abrir la landing</a>
+    </article>
+    <article class="piece">
+      <header><div><h3>Colección durante la oferta</h3><p>/cesped-para-trineo con las pistas exclusivas primero (desde el lunes 23).</p></div><span class="tag wait">Falta fusionar #36</span></header>
+      <div class="frame"><iframe src="https://anarols.github.io/heroturfs-black-friday-2026/coleccion.html" loading="lazy" title="Colección"></iframe></div>
+      <a class="open" href="https://anarols.github.io/heroturfs-black-friday-2026/coleccion.html" target="_blank">Abrir la colección</a>
+    </article>
+    <article class="piece">
+      <header><div><h3>Correo de early access</h3><p>Un solo HTML en 7 idiomas (<code>person|lookup:'idioma'</code>); asunto <code>{{ person|lookup:'asunto_bf' }}</code>.</p></div><span class="tag wait">Falta montarlo en Klaviyo</span></header>
+      <div class="frame mail"><iframe src="https://anarols.github.io/email-marketing-hero-modelo-proyectos/email-black-friday-early-access.html" loading="lazy" title="Correo"></iframe></div>
+      <a class="open" href="https://anarols.github.io/email-marketing-hero-modelo-proyectos/email-black-friday-early-access.html" target="_blank">Abrir el correo</a>
+    </article>
+  </div>
+
+  <h2>Lo que falta antes del sábado 21 a las 00:00</h2>
+  <div class="list">
+    <div class="row done"><span class="dot"></span><div><b>Web: pop-up y landing de base en producción</b><span>PR #31, #32, #33 y #35 fusionados y desplegados.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Fusionar el #34 (pop-up Black Week + asunto) y el #36 (landing «pistas exclusivas»)</b><span><a href="https://github.com/ROLSCARPETS/heroturfs-web-2026/pull/34" target="_blank">PR #34</a> · <a href="https://github.com/ROLSCARPETS/heroturfs-web-2026/pull/36" target="_blank">PR #36</a>. Después, comprobar que «Deploy production to Vercel» acaba en verde.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Shopify: fecha de fin del descuento «Black Friday»</b><span>29 nov a las 23:59 CET (ahora no tiene fin).</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Shopify: activar las 3 pistas y meterlas en su colección</b><span>Basics, Numbers y Pro: de borrador a activas; en «Césped para arrastre de trineos».</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Klaviyo: flujo de early access</b><span>Disparado por la lista «Black Friday 2026» (<code>Sm4PyZ</code>), un correo sin espera con el HTML de 7 idiomas y el asunto <code>{{ person|lookup:'asunto_bf' }}</code>.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Klaviyo: flujo de bienvenida</b><span>If al principio: si <code>origen = Black Friday 2026</code>, saltar el correo del 5 % y unirse al camino en el segundo.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Elegir la franja de la cabecera</b><span>La sesión de la landing espera tu elección entre las tres opciones.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Prueba real el sábado a las 00:00</b><span>Suscribirte desde el pop-up y comprobar en Klaviyo: lista BF 2026, <code>idioma</code>, <code>pais</code>, <code>origen</code>, <code>asunto_bf</code>, y que llega el correo.</span></div></div>
+  </div>
+</div>
+</body>
+</html>
