@@ -42,6 +42,17 @@
   .row b { display: block; font-size: 16px; }
   .row span { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 3px; }
   .row a { color: #fff; }
+  .bar-demo { height: 420px; background: #0c0d0f; border-top: 1px solid var(--line); display: flex; flex-direction: column; }
+  .bar-demo .bwbar { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; padding: 10px 14px; background: #D62D25; color: #fff; text-align: center; }
+  .bar-demo .bwbar b { font-family: "Barlow Condensed", sans-serif; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: 14px; }
+  .bar-demo .bwbar span { font-size: 13px; font-weight: 600; }
+  .bar-demo .bwbar i { font-style: normal; opacity: .55; font-size: 10px; }
+  .bar-demo .bwbar u { font-family: "Barlow Condensed", sans-serif; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 13px; text-decoration: none; border-bottom: 1.5px solid #fff; }
+  .bar-demo .navdemo { display: flex; justify-content: space-between; padding: 14px 20px; font-size: 11px; font-weight: 700; letter-spacing: .08em; color: #fff; text-transform: uppercase; border-bottom: 1px solid var(--line); }
+  .bar-demo .note { margin: auto 20px 20px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+  .bar-demo .mobile { margin: 18px auto 0; width: 360px; max-width: 92%; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .bar-demo .mobile .bwbar { gap: 8px; padding: 8px; flex-wrap: nowrap; white-space: nowrap; }
+  .bar-demo .mobile .bwbar b { font-size: 12px; } .bar-demo .mobile .bwbar span, .bar-demo .mobile .bwbar u { font-size: 11px; }
   code { background: #23262a; padding: 1px 6px; border-radius: 5px; font-size: 13px; }
   @media (max-width: 860px) {
     h1 { font-size: 44px; }
@@ -60,8 +71,8 @@
 
   <div class="timeline">
     <div class="step"><b>Sáb 21 · 00:00</b><span>Early access: pop-up con cuenta atrás, landing abierta y -20 % activo en Shopify. Quien se suscribe recibe el correo con el acceso.</span></div>
-    <div class="step"><b>Lun 23 · 00:00</b><span>Empieza la Black Week para todos: pop-up de oferta → landing, y las pistas entran en las colecciones.</span></div>
-    <div class="step"><b>Dom 29 · 23:59</b><span>Termina (o antes, si se agotan: el pop-up desaparece solo). Vuelve el pop-up de newsletter.</span></div>
+    <div class="step"><b>Lun 23 · 00:00</b><span>Empieza la Black Week para todos: pop-up de oferta → landing, franja roja en la cabecera de toda la web y las pistas entran (las primeras) en las colecciones.</span></div>
+    <div class="step"><b>Dom 29 · 23:59</b><span>Termina. Si antes se agotan todas las pistas, se retiran solos el pop-up, la franja y las pistas de las colecciones; la landing sigue con todo «Agotado». Vuelve el pop-up de newsletter.</span></div>
   </div>
 
   <h2>Las piezas</h2>
@@ -72,7 +83,7 @@
       <a class="open" href="https://anarols.github.io/heroturfs-black-friday-2026/popup.html" target="_blank">Abrir el pop-up</a>
     </article>
     <article class="piece">
-      <header><div><h3>Landing /black-friday</h3><p>Las 3 pistas de Shopify con -20 %, fechas y unidades.</p></div><span class="tag ok">En producción</span></header>
+      <header><div><h3>Landing /black-friday</h3><p>Las 4 pistas de Shopify (Valhalla Basics, Numbers, Pro y Elysium Pro) con -20 %, fechas y unidades.</p></div><span class="tag ok">En producción</span></header>
       <div class="frame"><iframe src="https://anarols.github.io/heroturfs-black-friday-2026/web.html" loading="lazy" title="Landing"></iframe></div>
       <a class="open" href="https://anarols.github.io/heroturfs-black-friday-2026/web.html" target="_blank">Abrir la landing</a>
     </article>
@@ -82,21 +93,32 @@
       <a class="open" href="https://anarols.github.io/heroturfs-black-friday-2026/coleccion.html" target="_blank">Abrir la colección</a>
     </article>
     <article class="piece">
-      <header><div><h3>Correo de early access</h3><p>Un solo HTML en 7 idiomas (<code>person|lookup:'idioma'</code>); asunto <code>{{ person|lookup:'asunto_bf' }}</code>.</p></div><span class="tag wait">Falta montarlo en Klaviyo</span></header>
+      <header><div><h3>Correo de early access</h3><p>Un solo HTML en 7 idiomas (<code>person|lookup:'idioma'</code>); asunto <code>{{ person|lookup:'asunto_bf' }}</code>.</p></div><span class="tag ok">Montado y probado en Klaviyo</span></header>
       <div class="frame mail"><iframe src="https://anarols.github.io/email-marketing-hero-modelo-proyectos/email-black-friday-early-access.html" loading="lazy" title="Correo"></iframe></div>
       <a class="open" href="https://anarols.github.io/email-marketing-hero-modelo-proyectos/email-black-friday-early-access.html" target="_blank">Abrir el correo</a>
+    </article>
+    <article class="piece">
+      <header><div><h3>Franja de la cabecera</h3><p>En todas las páginas de los 7 dominios, del lun 23 al dom 29, enlazada a la landing. Las unidades salen de Shopify.</p></div><span class="tag ok">En producción</span></header>
+      <div class="bar-demo">
+        <div class="bwbar"><b>Black Week</b><i>•</i><span>Pistas exclusivas con un −20 %</span><i>•</i><span>Del 23 al 29 de noviembre o hasta agotar stock</span><i>•</i><span>Quedan N unidades</span><u>Ver ofertas →</u></div>
+        <div class="navdemo"><span>Productos · Proyectos · Contacto</span><span>Heroturfs</span><span>España</span></div>
+        <div class="mobile"><div class="bwbar"><b>Black Week</b><i>•</i><span>−20 % pistas exclusivas</span><u>Ver ofertas →</u></div></div>
+        <p class="note">Se activa sola el lunes 23 a las 00:00 (Madrid) y se quita el lunes 30. En móvil solo «−20 % pistas exclusivas». Para verla antes en la web real: <code>heroturfs.es/?bw=preview</code>.</p>
+      </div>
+      <a class="open" href="https://heroturfs.es/?bw=preview" target="_blank">Verla en heroturfs.es</a>
     </article>
   </div>
 
   <h2>Lo que falta antes del sábado 21 a las 00:00</h2>
   <div class="list">
-    <div class="row done"><span class="dot"></span><div><b>Web: pop-up y landing en producción</b><span>PR #31, #32, #33 y #35 fusionados y desplegados.</span></div></div>
+    <div class="row done"><span class="dot"></span><div><b>Web en producción: pop-up, landing, colecciones y franja</b><span>PR #31 a #42 fusionados y desplegados (el despliegue estuvo bloqueado por un aviso de seguridad de picomatch hasta el #41). La landing ya tiene las 4 pistas y los textos de Black Week.</span></div></div>
     <div class="row done"><span class="dot"></span><div><b>Fusionados el #34 (pop-up Black Week + asunto) y el #36 (landing «pistas exclusivas»)</b><span><a href="https://github.com/ROLSCARPETS/heroturfs-web-2026/pull/34" target="_blank">PR #34</a> · <a href="https://github.com/ROLSCARPETS/heroturfs-web-2026/pull/36" target="_blank">PR #36</a>. Desplegados y comprobados en heroturfs.es.</span></div></div>
-    <div class="row done"><span class="dot"></span><div><b>Shopify: fecha de fin del descuento «Black Friday»</b><span>29 nov a las 23:59 CET.</span></div></div>
-    <div class="row"><span class="dot"></span><div><b>Shopify: activar las 3 pistas y meterlas en su colección</b><span>Basics, Numbers y Pro: de borrador a activas; en «Césped para arrastre de trineos».</span></div></div>
-    <div class="row"><span class="dot"></span><div><b>Klaviyo: flujo de early access</b><span>Disparado por la lista «Black Friday 2026» (<code>Sm4PyZ</code>), un correo sin espera con el HTML de 7 idiomas y el asunto <code>{{ person|lookup:'asunto_bf' }}</code>.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Shopify: fecha de fin del descuento «Black Friday»</b><span>Ahora termina el 29 nov a las 23:30 (Madrid); la web muestra la oferta hasta las 23:59. Ponerlo a las 23:59 para que coincidan.</span></div></div>
+    <div class="row done"><span class="dot"></span><div><b>Shopify: traducciones de las 4 pistas</b><span>Título y descripción en inglés, francés, italiano, alemán, neerlandés y portugués.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Shopify: activar las 4 pistas (viernes ~23:45)</b><span>Basics, Numbers, Pro y Elysium Pro: de borrador a activas y publicadas en «Heroturfs Headless». Ya están en «Césped para arrastre de trineos». Falta poner la unidad de la Elysium Pro (ahora 0 → sale «Agotado»).</span></div></div>
+    <div class="row done"><span class="dot"></span><div><b>Klaviyo: flujo de early access (montado y probado)</b><span>Disparado por la lista «Black Friday 2026» (<code>Sm4PyZ</code>), un correo sin espera con el HTML de 7 idiomas y el asunto <code>{{ person|lookup:'asunto_bf' }}</code>.</span></div></div>
     <div class="row"><span class="dot"></span><div><b>Klaviyo: flujo de bienvenida</b><span>If al principio: si <code>origen = Black Friday 2026</code>, saltar el correo del 5 % y unirse al camino en el segundo.</span></div></div>
-    <div class="row"><span class="dot"></span><div><b>Elegir la franja de la cabecera</b><span>La sesión de la landing espera tu elección entre las tres opciones.</span></div></div>
+    <div class="row done"><span class="dot"></span><div><b>Franja de la cabecera</b><span>Elegida y en producción (PR #42). Se activa sola el lunes 23 a las 00:00; para verla antes, <code>heroturfs.es/?bw=preview</code>.</span></div></div>
     <div class="row"><span class="dot"></span><div><b>Prueba real el sábado a las 00:00</b><span>Suscribirte desde el pop-up y comprobar en Klaviyo: lista BF 2026, <code>idioma</code>, <code>pais</code>, <code>origen</code>, <code>asunto_bf</code>, y que llega el correo.</span></div></div>
   </div>
 </div>
