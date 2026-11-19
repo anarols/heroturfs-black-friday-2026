@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Week 2026 UK · Heroturfs</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0b0c0e; --card:#15171a; --line:#2a2d31; --ink:#fff; --muted:#9aa3ab; --red:#e3332b; --ok:#43a35a; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: "Barlow", Arial, sans-serif; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 40px 24px 64px; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .eyebrow::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--red); margin-right: 10px; }
+  h1 { font-family: "Barlow Condensed", sans-serif; font-weight: 900; font-size: 64px; line-height: .95; margin: 14px 0 10px; }
+  h1 em { font-style: normal; color: var(--red); }
+  .lead { color: #c9ced3; font-size: 17px; max-width: 760px; line-height: 1.5; }
+  h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 30px; margin: 48px 0 16px; }
+  .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .step b { display: block; font-family: "Barlow Condensed", sans-serif; font-size: 26px; font-weight: 900; }
+  .step span { color: var(--muted); font-size: 14px; line-height: 1.45; display: block; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .piece { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+  .piece header { padding: 18px 20px 14px; display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+  .piece h3 { font-family: "Barlow Condensed", sans-serif; font-size: 26px; font-weight: 900; }
+  .piece p { color: var(--muted); font-size: 14px; line-height: 1.45; margin-top: 4px; }
+  .tag { white-space: nowrap; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 6px 10px; border-radius: 8px; }
+  .tag.ok { background: rgba(67,163,90,.16); color: #7fd394; }
+  .tag.wait { background: rgba(227,51,43,.16); color: #ff8a84; }
+  .frame { position: relative; height: 420px; background: #000; border-top: 1px solid var(--line); overflow: hidden; }
+  .frame iframe { position: absolute; top: 0; left: 0; width: 1440px; height: 900px; border: 0; transform: scale(.43); transform-origin: 0 0; }
+  .frame.mail iframe { width: 640px; height: 980px; transform: scale(.43); left: 50%; margin-left: -138px; }
+  .open { display: block; padding: 14px 20px; font-weight: 700; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: #fff; text-decoration: none; border-top: 1px solid var(--line); }
+  .open::after { content: "  →"; color: var(--red); }
+  .open:hover { background: #1c1f23; }
+  .list { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 6px 22px; }
+  .row { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: flex-start; }
+  .row:last-child { border-bottom: 0; }
+  .dot { flex: none; width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--muted); margin-top: 2px; }
+  .row.done .dot { border-color: var(--ok); background: var(--ok); }
+  .row b { display: block; font-size: 16px; }
+  .row span { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 3px; }
+  .row a { color: #fff; }
+  .bar-demo { height: 420px; background: #0c0d0f; border-top: 1px solid var(--line); display: flex; flex-direction: column; }
+  .bar-demo .bwbar { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; padding: 10px 14px; background: #D62D25; color: #fff; text-align: center; }
+  .bar-demo .bwbar b { font-family: "Barlow Condensed", sans-serif; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: 14px; }
+  .bar-demo .bwbar span { font-size: 13px; font-weight: 600; }
+  .bar-demo .bwbar i { font-style: normal; opacity: .55; font-size: 10px; }
+  .bar-demo .bwbar u { font-family: "Barlow Condensed", sans-serif; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 13px; text-decoration: none; border-bottom: 1.5px solid #fff; }
+  .bar-demo .navdemo { display: flex; justify-content: space-between; padding: 14px 20px; font-size: 11px; font-weight: 700; letter-spacing: .08em; color: #fff; text-transform: uppercase; border-bottom: 1px solid var(--line); }
+  .bar-demo .note { margin: auto 20px 20px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+  .bar-demo .mobile { margin: 18px auto 0; width: 360px; max-width: 92%; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .bar-demo .mobile .bwbar { gap: 8px; padding: 8px; flex-wrap: nowrap; white-space: nowrap; }
+  .bar-demo .mobile .bwbar b { font-size: 12px; } .bar-demo .mobile .bwbar span, .bar-demo .mobile .bwbar u { font-size: 11px; }
+  code { background: #23262a; padding: 1px 6px; border-radius: 5px; font-size: 13px; }
+  @media (max-width: 860px) {
+    h1 { font-size: 44px; }
+    .grid, .timeline { grid-template-columns: 1fr; }
+    .frame { height: 320px; }
+    .frame iframe { transform: scale(.33); }
+    .frame.mail iframe { transform: scale(.33); margin-left: -106px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Black Week · Heroturfs UK</p>
+  <h1>Black Week 2026 en UK. <em>Lo que queda listo.</em></h1>
+  <p class="lead">-20 % en las 4 pistas exclusivas de la tienda UK (Valhalla Basics, Numbers, Pro y Elysium Pro), en heroturfs.co.uk. Todo va con la hora de España: en UK es una hora menos (abajo, en hora de Reino Unido).</p>
+
+  <div class="timeline">
+    <div class="step"><b>Vie 20 · 19:00 UK</b><span>Early access (20:00 en España): pop-up con cuenta atrás, landing abierta y -20 % activo en la tienda UK. Quien se suscribe recibe el correo con el acceso y entra en la bienvenida UK.</span></div>
+    <div class="step"><b>Dom 22 · 23:00 UK</b><span>Empieza la Black Week para todos (lun 23, 00:00 en España): pop-up de oferta → landing, franja roja en la cabecera y las pistas entran (las primeras) en la colección.</span></div>
+    <div class="step"><b>Dom 29 · 22:59 UK</b><span>Termina (23:59 en España). Si antes se agotan las 4 pistas UK, se retiran solos el pop-up, la franja y las pistas de la colección; la landing sigue con todo «Sold out».</span></div>
+  </div>
+
+  <h2>Las piezas en heroturfs.co.uk</h2>
+  <div class="grid">
+    <article class="piece">
+      <header><div><h3>Landing /black-friday</h3><p>Las 4 pistas de la tienda UK con precio en libras tachado y -20 %, textos en inglés y unidades. Se ve cuando el PR #45 esté publicado y las pistas activas.</p></div><span class="tag wait">Pendiente de merge</span></header>
+      <a class="open" href="https://heroturfs.co.uk/black-friday?bf=preview" target="_blank">Verla antes de tiempo (?bf=preview)</a>
+    </article>
+    <article class="piece">
+      <header><div><h3>Franja de la cabecera</h3><p>«BLACK WEEK • Exclusive tracks with 20% off • 23–29 November or while stocks last · SEE OFFERS →». Del lun 23 al dom 29 (hora de España), en toda la web.</p></div><span class="tag wait">Pendiente de merge</span></header>
+      <a class="open" href="https://heroturfs.co.uk/?bw=preview" target="_blank">Verla antes de tiempo (?bw=preview)</a>
+    </article>
+    <article class="piece">
+      <header><div><h3>Pop-up de early access y de oferta</h3><p>El mismo pop-up que en el resto, en inglés. Cuenta atrás desde el vie 20; suscribe a la lista «Black Friday 2026» de Klaviyo UK (<code>SAr3FR</code>) y a la newsletter UK (<code>Rp2rpJ</code>).</p></div><span class="tag wait">Pendiente de merge</span></header>
+      <a class="open" href="https://heroturfs.co.uk/?newsletter=preview&amp;bf=countdown" target="_blank">Ver la cuenta atrás (preview)</a>
+    </article>
+    <article class="piece">
+      <header><div><h3>Colección durante la oferta</h3><p>/sled-tracks con las 4 pistas Black Week primero, con etiquetas, precio tachado y unidades (del lun 23 al dom 29).</p></div><span class="tag wait">Pendiente de merge</span></header>
+      <a class="open" href="https://heroturfs.co.uk/sled-tracks" target="_blank">Abrir la colección</a>
+    </article>
+  </div>
+
+  <h2>Lo que falta antes del viernes 20 a las 19:00 (UK)</h2>
+  <div class="list">
+    <div class="row"><span class="dot"></span><div><b>Web: fusionar el PR #45</b><span><a href="https://github.com/ROLSCARPETS/heroturfs-web-2026/pull/45" target="_blank">PR #45</a>: landing, franja, colección y pop-up en .co.uk. Después, comprobar que el despliegue termina en verde.</span></div></div>
+    <div class="row done"><span class="dot"></span><div><b>Shopify UK: las 4 pistas creadas</b><span><code>black-sled-track-with-markings-valhalla-basics</code>, <code>…-valhalla-numbers</code>, <code>…-valhalla-pro</code> y <code>green-sled-track-with-markings-elysium-pro</code>, con sus precios en libras.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Shopify UK: descuento automático -20 %</b><span>En las 4 pistas, del vie 20 a las 20:00 al dom 29 a las 23:59 (hora CET de la tienda).</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Shopify UK: colección y publicación</b><span>Las 4 pistas en la colección <code>sled-tracks</code> y publicadas en el canal headless antes del viernes a las 19:00 (UK).</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Shopify UK: inventario</b><span>Las pistas físicas son las mismas que en la tienda EU. Comprobar que el inventario se sincroniza entre tiendas (One sincroniza por SKU) o repartir las unidades, para no vender la misma pista dos veces.</span></div></div>
+    <div class="row done"><span class="dot"></span><div><b>Klaviyo UK: lista «Black Friday 2026»</b><span>Creada en la cuenta UK: <code>SAr3FR</code>.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Klaviyo UK: flujo de early access</b><span>Disparado por la lista <code>SAr3FR</code>, un correo sin espera con la versión en inglés del correo de early access y el asunto <code>{{ person|lookup:'asunto_bf' }}</code>.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Klaviyo UK: flujo de bienvenida</b><span>En el Mail 1 (5 %), filtro adicional: <code>origen</code> no es igual a <code>Black Friday 2026</code> O <code>origen</code> no se ha establecido.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Prueba real el viernes a las 19:00 (UK)</b><span>Abrir <code>heroturfs.co.uk/black-friday</code> y ver las 4 pistas en libras; añadir una al carrito y comprobar el -20 %; suscribirte desde el pop-up y comprobar en Klaviyo UK que estás en <code>SAr3FR</code> y en la newsletter UK, que llega el correo y que el Mail 1 de bienvenida sale «Omitido».</span></div></div>
+  </div>
+  <p class="lead" style="margin-top:28px;font-size:15px">Resumen general (todos los dominios): <a href="https://anarols.github.io/heroturfs-black-friday-2026/resumen.html" style="color:#fff">resumen.html</a></p>
+</div>
+</body>
+</html>
