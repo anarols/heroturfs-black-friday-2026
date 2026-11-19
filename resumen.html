@@ -67,7 +67,7 @@
 <div class="wrap">
   <p class="eyebrow">Black Week · Heroturfs</p>
   <h1>Black Week 2026. <em>Lo que queda listo.</em></h1>
-  <p class="lead">-20 % en pistas exclusivas, del 23 al 29 de noviembre o hasta agotar stock. En heroturfs.es, .eu, .fr, .it, .de, .nl y .pt (sin .com ni .co.uk).</p>
+  <p class="lead">-20 % en pistas exclusivas, del 23 al 29 de noviembre o hasta agotar stock (early access desde el viernes 20 a las 20:00). Todas las horas, en hora de España. En heroturfs.es, .eu, .fr, .it, .de, .nl y .pt (sin .com ni .co.uk).</p>
 
   <div class="timeline">
     <div class="step"><b>Vie 20 · 20:00</b><span>Early access: pop-up con cuenta atrás, landing abierta y -20 % activo en Shopify. Quien se suscribe recibe el correo con el acceso.</span></div>
@@ -111,16 +111,16 @@
 
   <h2>Lo que falta antes del viernes 20 a las 20:00</h2>
   <div class="list">
-    <div class="row done"><span class="dot"></span><div><b>Web en producción: pop-up, landing, colecciones y franja</b><span>PR #31 a #42 fusionados y desplegados (el despliegue estuvo bloqueado por un aviso de seguridad de picomatch hasta el #41). La landing ya tiene las 4 pistas y los textos de Black Week.</span></div></div>
+    <div class="row done"><span class="dot"></span><div><b>Web en producción: pop-up, landing, colecciones y franja</b><span>PR #31 a #44 fusionados y desplegados. La landing tiene las 4 pistas y los textos de Black Week. El early access (pop-up y landing) se abre el viernes 20 a las 20:00, hora de España, en todos los dominios (en Portugal, a las 19:00).</span></div></div>
     <div class="row done"><span class="dot"></span><div><b>Fusionados el #34 (pop-up Black Week + asunto) y el #36 (landing «pistas exclusivas»)</b><span><a href="https://github.com/ROLSCARPETS/heroturfs-web-2026/pull/34" target="_blank">PR #34</a> · <a href="https://github.com/ROLSCARPETS/heroturfs-web-2026/pull/36" target="_blank">PR #36</a>. Desplegados y comprobados en heroturfs.es.</span></div></div>
     <div class="row"><span class="dot"></span><div><b>Shopify: adelantar el inicio del descuento «Black Friday»</b><span>Ahora empieza el sábado 21 a las 00:00; tiene que empezar el viernes 20 a las 20:00, con el early access (web: PR #44).</span></div></div>
     <div class="row"><span class="dot"></span><div><b>Shopify: fecha de fin del descuento «Black Friday»</b><span>Ahora termina el 29 nov a las 23:30 (Madrid); la web muestra la oferta hasta las 23:59. Ponerlo a las 23:59 para que coincidan.</span></div></div>
     <div class="row done"><span class="dot"></span><div><b>Shopify: traducciones de las 4 pistas</b><span>Título y descripción en inglés, francés, italiano, alemán, neerlandés y portugués.</span></div></div>
-    <div class="row"><span class="dot"></span><div><b>Shopify: activar las 4 pistas (viernes antes de las 20:00)</b><span>Basics, Numbers, Pro y Elysium Pro: de borrador a activas y publicadas en «Heroturfs Headless». Ya están en «Césped para arrastre de trineos». Falta poner la unidad de la Elysium Pro (ahora 0 → sale «Agotado»).</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Shopify: activar las 4 pistas (viernes antes de las 20:00)</b><span>Basics, Numbers, Pro y Elysium Pro: de borrador a activas y publicadas en «Heroturfs Headless». Ya están en «Césped para arrastre de trineos». La Elysium Pro sigue con 0 unidades (sale «Agotado»): falta ponerle la suya.</span></div></div>
     <div class="row done"><span class="dot"></span><div><b>Klaviyo: flujo de early access (montado y probado)</b><span>Disparado por la lista «Black Friday 2026» (<code>Sm4PyZ</code>), un correo sin espera con el HTML de 7 idiomas y el asunto <code>{{ person|lookup:'asunto_bf' }}</code>.</span></div></div>
-    <div class="row"><span class="dot"></span><div><b>Klaviyo: flujo de bienvenida</b><span>If al principio: si <code>origen = Black Friday 2026</code>, saltar el correo del 5 % y unirse al camino en el segundo.</span></div></div>
+    <div class="row done"><span class="dot"></span><div><b>Klaviyo: flujo de bienvenida</b><span>Quien se suscribe en el early access entra también en la lista de newsletter de su dominio (PR #43) y en el flujo de su idioma. En los 7 flujos, el Mail 1 (5 %) tiene el filtro <code>origen</code> ≠ <code>Black Friday 2026</code> O no establecido, así que se lo salta.</span></div></div>
     <div class="row done"><span class="dot"></span><div><b>Franja de la cabecera</b><span>Elegida y en producción (PR #42). Se activa sola el lunes 23 a las 00:00; para verla antes, <code>heroturfs.es/?bw=preview</code>.</span></div></div>
-    <div class="row"><span class="dot"></span><div><b>Prueba real el viernes a las 20:00</b><span>Suscribirte desde el pop-up y comprobar en Klaviyo: lista BF 2026, <code>idioma</code>, <code>pais</code>, <code>origen</code>, <code>asunto_bf</code>, y que llega el correo.</span></div></div>
+    <div class="row"><span class="dot"></span><div><b>Prueba real el viernes a las 20:00</b><span>Abrir <code>/black-friday</code> y ver las 4 pistas; añadir una al carrito y comprobar el −20 %; suscribirte desde el pop-up y comprobar en Klaviyo que estás en la lista BF 2026 y en la de newsletter de tu idioma, con <code>idioma</code>, <code>pais</code>, <code>origen</code> y <code>asunto_bf</code>, que llega el correo de early access y que el Mail 1 de bienvenida sale «Omitido».</span></div></div>
   </div>
 </div>
 </body>
